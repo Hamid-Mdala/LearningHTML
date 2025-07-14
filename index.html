@@ -10,113 +10,137 @@
     <link rel="stylesheet" href="main.css" type="text/css">
 </head>
 <body> <!-- used to display content on the webpage -->
-    <h1>My Goals for the Year</h1>
-    
-    <hr>
+    <header>  <!-- header for our full page -->
+        <h1>My Goals for the Year</h1>
 
-    <nav>
-        <ul>
-            <li>
-                <a href="#html">Learning HTML</a>
-            </li>
-            <li>
-                <a href="#vacation">Planning a vacation</a>
-            </li>
-        </ul>
-    </nav>
-    
-    <hr>
+        <nav> <!-- can have more than nav area and if do have more than one nav area element, you have to label it -->
+            <ul>
+                <li>
+                    <a href="#html">Learning HTML</a>
+                </li>
+                <li>
+                    <a href="#vacation">Planning a vacation</a>
+                </li>
+            </ul>
+        </nav>
 
-    <section id="html">
-        <h2>I'm Ready to learn HTML</h2>
-        <p>This is my first web page.</p>
-        <img src="img/html_logo_300x300.png" alt="HTML5 Logo" title="I am learning HTML5" width="300" height="300">
-        <figure>
-            <figcaption>
-                An Example of HTML5 code
-            </figcaption>
-            <p>
-                <code>
-                    &lt;!DOCTYPE html&gt;<br>
-                    &lt;html&gt;<br>
-                    &lt;head&gt;<br>
-                    &lt;meta charset="UTF-8"&gt;<br>
-                    &lt;meta name="viewport" content="width=device-width, initial-scale=1"&gt;<br>
-                    &lt;/head&gt;<br>
-                    &lt;body&gt;<br>
-                    &lt;h1&gt;Hello World!&lt;/h1&gt;<br>
-                    &lt;p&gt;This is my first web page.&lt;/p&gt;<br>
-                    &lt;/body&gt;<br>
-                    &lt;/html&gt;<br>
-                </code>
-            </p>
-        </figure>
-        <h3>My Daily Schedule</h3>
-        <p>Let me tell you how I:</p>
-        <ol> <!-- ordered a list -->
-            <li>I learn more about HTML and CSS</li>
-            <li>I plan out my schedule.</li>
-            <li>I use resources from
-                <abbr title="Mozilla Developer Network">
-                    <a href="http://developer.mozilla.org/">MDN</a>
-                </abbr>.</li>
-        </ol>
-    </section>
+        <hr>
+    </header>
 
-    <hr>
-
-    <section id="vacation">
-        <h2>I'm Also planning a Vacation</h2>
-        <p>I've been working hard and <em>really need a getaway</em>.</p>
-        <p>I live in <abbr title="Kansas">KS</abbr>, so I want to visit a beach.</p>
-
-        <h3>Places I'd like to Visit</h3>
-        <ul> <!-- unordered a list -->
-            <li>
-                <p>I've heard good things about the caribbean.</p>
+    <main>  <!-- Only one main area per page -->
+        <article id="html"> <!-- its article because it clearly has its own topic -->
+            <h2>I'm Ready to learn HTML</h2>
+            <p>This is my first web page.</p>
+            <section>
+                <h3>HTML 5</h3>
+                <img src="img/html_logo_300x300.png" alt="HTML5 Logo" title="I am learning HTML5" width="300" height="300">
                 <figure>
-                    <img src="img/caribbean.jpg" alt="Caribbean Beach" title="I want to visit a Caribbean Bench" width="400" height="225" loading="lazy">
-                    <figcaption>Caribbean Beach Getaway</figcaption>
-                </figure>
-            </li>
-            <li><p>I've heard good things about going here:</p>
-                <address>
-                    Margarita ville Island Reserve Riviera
-                    Cancun<br>
-                    Bahia Tempich Puerto Morelos,
-                    Mexico<br>
-                    Colonial Morelos, Mexico 77580<br>
-                </address>
-                <figure>
-                    <img src="img/vacation.jpg" alt="Cancun Vacation" title="It's 5 o'Clock Somewhere!" width="400" height="267" loading="lazy">
                     <figcaption>
-                        A Caribbean Vacation Image
+                        An Example of HTML5 code
                     </figcaption>
+                    <p>
+                        <code>
+                            &lt;!DOCTYPE html&gt;<br>
+                            &lt;html&gt;<br>
+                            &lt;head&gt;<br>
+                            &lt;meta charset="UTF-8"&gt;<br>
+                            &lt;meta name="viewport" content="width=device-width, initial-scale=1"&gt;<br>
+                            &lt;/head&gt;<br>
+                            &lt;body&gt;<br>
+                            &lt;h1&gt;Hello World!&lt;/h1&gt;<br>
+                            &lt;p&gt;This is my first web page.&lt;/p&gt;<br>
+                            &lt;/body&gt;<br>
+                            &lt;/html&gt;<br>
+                        </code>
+                    </p>
                 </figure>
+            </section>
+            <section>
+                <h3>My Daily Schedule</h3>
+                <p>Let me tell you how I:</p>
+                <ol> <!-- ordered a list -->
+                    <li>I learn more about HTML and CSS</li>
+                    <li>I plan out my schedule.</li>
+                    <li>I use resources from
+                        <abbr title="Mozilla Developer Network">
+                            <a href="http://developer.mozilla.org/">MDN</a>
+                        </abbr>.</li>
+                </ol>
+                <aside> <!-- Complementary content not in the article or in the section-->
+                    <details> <!-- The details work with the summary element to make a sidebar -->
+                        <summary>
+                            Guess the <mark>number of hours </mark>I code per day?
+                        </summary>
+                        <p>I start at <time datetime="08:00">8 am </time>and I write code for <time datetime="PT3H">3 hours </time>every morning</p>
+                    </details>
+                </aside>
+            </section>
+        </article>
 
-            </li>
-        </ul>
+        <hr>
 
-        <!-- TODO: Add more places -->
-        <h3>Places I Want to Avoid</h3>
-        <dl>
-            <dt>North Pole</dt>
-            <dd>I hear this is <strong>cold</strong>!</dd>
+        <article id="vacation">
+            <h2>I'm Also planning a Vacation</h2>
+            <p>I've been working hard and <em>really need a getaway</em>.</p>
+            <p>I live in <abbr title="Kansas">KS</abbr>, so I want to visit a beach.</p>
 
-            <dt>South Pole</dt>
-            <dd>This is also cold.</dd>
+            <section>
+                <h3>Places I'd like to Visit</h3>
+                <ul> <!-- unordered a list -->
+                    <li>
+                        <p>I've heard good things about the caribbean.</p>
+                        <figure>
+                            <img src="img/caribbean.jpg" alt="Caribbean Beach" title="I want to visit a Caribbean Bench" width="400" height="225" loading="lazy">
+                            <figcaption>Caribbean Beach Getaway</figcaption>
+                        </figure>
+                    </li>
+                    <li><p>I've heard good things about going here:</p>
+                        <address>
+                            Margarita ville Island Reserve Riviera
+                            Cancun<br>
+                            Bahia Tempich Puerto Morelos,
+                            Mexico<br>
+                            Colonial Morelos, Mexico 77580<br>
+                        </address>
+                        <figure>
+                            <img src="img/vacation.jpg" alt="Cancun Vacation" title="It's 5 o'Clock Somewhere!" width="400" height="267" loading="lazy">
+                            <figcaption>
+                                A Caribbean Vacation Image
+                            </figcaption>
+                        </figure>
 
-            <dt>Mountain Tops</dt>
-            <dd>These are also cold.</dd>
-        </dl>
-    </section>
+                    </li>
+                </ul>
+            </section>
 
-    <hr>
+            <!-- TODO: Add more places -->
+            <section>
+                <h3>Places I Want to Avoid</h3>
+                <dl>
+                    <dt>North Pole</dt>
+                    <dd>I hear this is <strong>cold</strong>!</dd>
 
-    &lt;&lt;&lt; &copy; <a href="about.html">Hamid Mdala</a> &gt;&gt;&gt; <!--this is the relative url current-->
-    <p>
-        <a href="#">Back to the Top</a>
-    </p>
+                    <dt>South Pole</dt>
+                    <dd>This is also cold.</dd>
+
+                    <dt>Mountain Tops</dt>
+                    <dd>These are also cold.</dd>
+                </dl>
+            </section>
+        </article>
+
+        <hr>
+    </main>
+
+    <footer>  <!-- Can be more than one footer per page just like the header like in a social media page or blog -->
+        <p>
+            &lt;&lt;&lt; &copy; <a href="about.html">Hamid Mdala</a> &gt;&gt;&gt; <!--this is the relative url current-->
+        </p>
+        <p>
+            <a href="#">Back to the Top</a>
+        </p>
+    </footer>
 </body>
 </html>
 
+<!-- AVOID DIV AND SPAN WHILE LEARNING HTML BECAUSE THEY ARE NO SEMANTIC MEANING TO DIV AND SPAN THEY ARE BLOCK ELEMENTS -->
