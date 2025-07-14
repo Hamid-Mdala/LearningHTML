@@ -5,3 +5,15 @@ body {
     background-color: #333;
     color: white; /*this is the font color*/
 }
+
+a { /*this is the normal link color*/
+    color: aliceblue;
+}
+
+a:visited { /*this is the visited link color*/
+    color: lightgray;
+}
+
+a:hover a:active { /*this is the clicked link color and when we hover */
+    color: #eee;
+}
