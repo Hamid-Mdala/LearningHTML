@@ -17,3 +17,10 @@ a:visited { /*this is the visited link color*/
 a:hover a:active { /*this is the clicked link color and when we hover */
     color: #eee;
 }
+
+table, tr, th, td, caption {
+    border: 1px solid #eee;
+    font-family: 'courier new', courier, monospace;
+    border-collapse: collapse;
+    padding: 0.5rem;
+}
